@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  padding: 25px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+}
+
+/* LAYOUT */
+.container {
+  padding: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ROUND */
+.round {
+  margin-bottom: 50px;
+}
+
+.round h2 {
+  margin-bottom: 20px;
+  border-left: 5px solid #00ffcc;
+  padding-left: 10px;
+}
+
+/* GRID */
+.round-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* MATCH CARD */
+.match-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.match-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* PLAYERS */
+.players {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-weight: bold;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+
+.vs {
+  color: #00ffcc;
+  font-weight: bold;
+}
+
+/* SCORE */
+.score {
+  margin: 12px 0;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* WINNER */
+.winner {
+  text-align: center;
+  color: #00ffcc;
+  font-weight: bold;
+}
+
+/* WINNER CARD */
+.winner-card {
+  margin-top: 60px;
+  padding: 30px;
+  text-align: center;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #00c9ff, #92fe9d);
+  color: #000;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px #00ffcc;
+  }
+  to {
+    box-shadow: 0 0 30px #00ffcc;
+  }
+}
+
+/* EMPTY */
+.empty {
+  opacity: 0.7;
+  font-style: italic;
+}
+
+/* MEDIA QUERIES */
+
+/* Small devices (phones) */
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 15px;
+  }
+  
+  .player-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .score {
+    font-size: 16px;
+  }
+
+  .round-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .players {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .vs {
+    margin: 10px 0;
+  }
+}
+
+/* Medium devices (tablets) */
+@media screen and (max-width: 900px) {
+  .round-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+
+  .player-img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .score {
+    font-size: 17px;
+  }
+}
+
+/* Large devices (desktops) */
+@media screen and (min-width: 901px) {
+  .round-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+}
