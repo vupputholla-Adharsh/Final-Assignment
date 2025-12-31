@@ -3,7 +3,7 @@ require("dotenv").config();
 
 const connectDB = async () => {
   try {
-    const mongoURI = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/badminton";
+    const mongoURI = process.env.MONGODB_URI || "mongodb+srv://vupputhollaadarsh_db_user:kSmEnmi5MDhOxLoi@cluster0.wsrfpr1.mongodb.net/";
     await mongoose.connect(mongoURI);
     console.log("MongoDB Connected");
   } catch (error) {
