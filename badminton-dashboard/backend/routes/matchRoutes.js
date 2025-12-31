@@ -8,7 +8,7 @@ router.get("/round/:round", async (req, res) => {
 });
 
 router.get("/winner", async (req, res) => {
-  const final = await Match.findOne({ round: "Finals" });
+  const final = await Match.findOne({ round: "Final" });
   res.json({ winner: final?.winner });
 });
 
